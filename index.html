@@ -1,0 +1,97 @@
+<html><head><title>tes</title><body>
+<br><br>
+
+<font face="serif" color="red">
+
+<center>
+Logika banyak minimal produksi barang ./ 1 Bahan <button onclick="pembuatanbarang()">mulai logika </button><br>
+Logika banyak minimal produksi barang ./ 2 Bahan <button onclick="pembuatanbarang2()">mulai logika </button><br>
+ Logika banyak minimal produksi barang ./ 3 Bahan <button onclick="pembuatanbarang3()">mulai logika </button><br>
+</center>
+<p align="right"><i>dari js sederhana</i></p>
+
+<script >
+function pembuatanbarang(){
+var barang = prompt("masukan barang apa yang ingin dibuat");
+var bahan = prompt("apa bahan yang diperlukan?");
+var butuh = prompt("berapa " +bahan+" yang kau butuhkan?");
+var jumlah = prompt("berapa " +bahan+" yang kau punya?");
+var produksi = jumlah/butuh;
+var hasil = produksi/hasil;
+alert(" untuk membuat "+barang+ " sebanyak "+produksi+" kau butuh  "+bahan+" sebanyak " + jumlah);
+}
+
+
+
+function pembuatanbarang2(){
+var tujuan = prompt("masukan barang apa yang ingin dibuat");
+var bahana = prompt("apa nama bahan pertama yang diperlukan?");
+var bahanb = prompt("apa nama bahan kedua yang diperlukan?");
+var butuha = prompt("berapa jumlah "+bahana+" yang diperlukan?");
+var butuhb = prompt("berapa jumlah "+bahanb+" yang diperlukan?");
+var milika = prompt("berapa jumlah "+bahana+" yang dimiliki?");
+var milikb = prompt("berapa jumlah "+bahanb+" yang dimiliki?");
+var minmilik = ""; if(milika <= milikb) minmilik = milika
+else minmilik = milikb; 
+var minbutuh = ""; if(milika <= milikb) minbutuh = butuha
+else minbutuh = butuhb; 
+var minnama = ""; if(milika <= milikb) minnama = bahana
+else minnama = bahanb; 
+var banyakproduk = minmilik/minbutuh;
+var butuhbaranga = butuha*banyakproduk;
+var butuhbarangb = butuhb*banyakproduk;
+alert("anda dapat membuat " +tujuan+ " sebanyak "+ banyakproduk+ " dengan menambahkan "+bahana+" sebanyak "+butuhbaranga+" ; " +bahanb+" sebanyak "+butuhbarangb);
+}
+
+
+function pembuatanbarang3(){
+var tujuan = prompt("masukan barang apa yang ingin dibuat");
+
+var bahana = prompt("apa nama bahan pertama yang diperlukan?");
+var bahanb = prompt("apa nama bahan kedua yang diperlukan?");
+var bahanc = prompt("apa nama bahan  ketiga yang diperlukan?");
+
+var butuha = prompt("berapa jumlah "+bahana+" yang diperlukan?");
+var butuhb = prompt("berapa jumlah "+bahanb+" yang diperlukan?");
+var butuhc = prompt("berapa jumlah "+bahanc+" yang diperlukan?");
+
+var milika = prompt("berapa jumlah "+bahana+" yang dimiliki?");
+var milikb = prompt("berapa jumlah "+bahanb+" yang dimiliki?");
+var milikc = prompt("berapa jumlah "+bahanc+" yang dimiliki?");
+
+var minmilik = ""; if(milika <= milikb <= milikc) minmilik = milika
+else if(milikb <= milika <= milikc) minmilik = milikb
+else if(milikb <= milikc <= milika) minmilik = milikb
+else minmilik = milikc; 
+
+var minbutuh = ""; if(milika <= milikb <= milikc) minbutuh = butuha
+else if(milikb <= milika <= milikc) minbutuh = butuhb
+else if(milikb <= milikc <= milika) minbutuh = butuhb
+else minbutuh = butuhc; 
+
+var minnama = ""; if(milika <= milikb <= milikc) minnama = bahana
+else if(milikb <= milika <= milikc) minnama = bahanb
+else if(milikb <= milikc <= milika) minnama = bahanb
+else minnama = bahanc; 
+
+var banyakproduk = minmilik/minbutuh;
+
+var butuhbaranga = butuha*banyakproduk;
+var butuhbarangb = butuhb*banyakproduk;
+var butuhbarangc = butuhc*banyakproduk;
+
+alert("anda dapat membuat " +tujuan+ " sebanyak "+ banyakproduk+ " dengan menambahkan "+bahana+" sebanyak "+butuhbaranga+" ; " +bahanb+" sebanyak "+butuhbarangb+" ; " +bahanc+" sebanyak "+butuhbarangc);
+}
+</script>
+
+
+
+
+
+
+
+
+
+</body></html>
+
+
